@@ -4,9 +4,9 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-import com.dmspro.ecalendar.R;
-import com.dmspro.ecalendar.core.BaseActivity;
-import com.dmspro.ecalendar.utils.FragmentController;
+import com.connectme.R;
+import com.connectme.core.BaseActivity;
+import com.connectme.util.FragmentController;
 
 /**
  * Created by tantd on 2/7/2020.

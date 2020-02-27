@@ -13,9 +13,9 @@ import com.alamkanak.weekview.DateTimeInterpreter;
 import com.alamkanak.weekview.MonthLoader;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
-import com.dmspro.ecalendar.R;
-import com.dmspro.ecalendar.core.BaseFragment;
-import com.dmspro.ecalendar.schedule.domain.model.Event;
+import com.connectme.R;
+import com.connectme.core.BaseFragment;
+import com.connectme.schedule.domain.model.Event;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

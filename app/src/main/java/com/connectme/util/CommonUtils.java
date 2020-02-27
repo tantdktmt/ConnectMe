@@ -8,7 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.provider.Settings;
 
-import com.dmspro.ecalendar.R;
+import com.connectme.R;
 
 import java.io.IOException;
 import java.io.InputStream;

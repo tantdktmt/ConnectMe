@@ -1,7 +1,7 @@
 package com.connectme.data.network;
 
-import com.dmspro.ecalendar.core.DataLayerException;
-import com.dmspro.ecalendar.schedule.domain.model.Event;
+import com.connectme.core.DataLayerException;
+import com.connectme.schedule.domain.model.Event;
 
 import java.util.List;
 

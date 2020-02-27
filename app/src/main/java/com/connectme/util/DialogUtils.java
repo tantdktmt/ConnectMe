@@ -5,7 +5,7 @@ import android.content.DialogInterface;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.dmspro.ecalendar.R;
+import com.connectme.R;
 
 /**
  * Created by tantd on 8/22/2017.

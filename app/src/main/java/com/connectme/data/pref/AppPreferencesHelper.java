@@ -3,7 +3,7 @@ package com.connectme.data.pref;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.dmspro.ecalendar.EcalendarApplication;
+import com.connectme.ConnectMeApplication;
 
 /**
  * Created by tantd on 2/7/2020.
@@ -26,7 +26,7 @@ public class AppPreferencesHelper {
     }
 
     private AppPreferencesHelper() {
-        mPrefs = EcalendarApplication.getInstance().getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE);
+        mPrefs = ConnectMeApplication.getInstance().getSharedPreferences(PREFS_FILE_NAME, Context.MODE_PRIVATE);
     }
 
     public String getAccessToken() {

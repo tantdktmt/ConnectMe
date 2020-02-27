@@ -1,8 +1,8 @@
 package com.connectme.schedule;
 
-import com.dmspro.ecalendar.core.UseCase;
-import com.dmspro.ecalendar.data.network.NetworkRepository;
-import com.dmspro.ecalendar.schedule.domain.usecase.GetSchedule;
+import com.connectme.core.UseCase;
+import com.connectme.data.network.NetworkRepository;
+import com.connectme.schedule.domain.usecase.GetSchedule;
 
 /**
  * Created by HP on 8/21/2017.

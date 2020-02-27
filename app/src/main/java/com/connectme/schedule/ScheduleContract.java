@@ -1,8 +1,8 @@
 package com.connectme.schedule;
 
-import com.dmspro.ecalendar.core.BasePresenter;
-import com.dmspro.ecalendar.core.IView;
-import com.dmspro.ecalendar.schedule.domain.model.Event;
+import com.connectme.core.BasePresenter;
+import com.connectme.core.IView;
+import com.connectme.schedule.domain.model.Event;
 
 import java.util.List;
 
