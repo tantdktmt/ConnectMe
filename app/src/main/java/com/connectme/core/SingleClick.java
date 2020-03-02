@@ -5,8 +5,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 
-import com.dmspro.ecalendar.utils.Constants;
-import com.dmspro.ecalendar.utils.LogUtils;
+import com.connectme.util.Constants;
+import com.connectme.util.LogUtils;
 
 /**
  *

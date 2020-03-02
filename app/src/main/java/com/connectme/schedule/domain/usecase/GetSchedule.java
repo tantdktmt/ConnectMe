@@ -2,10 +2,10 @@ package com.connectme.schedule.domain.usecase;
 
 import androidx.annotation.NonNull;
 
-import com.dmspro.ecalendar.core.DataLayerException;
-import com.dmspro.ecalendar.core.UseCase;
-import com.dmspro.ecalendar.data.network.NetworkDataSource;
-import com.dmspro.ecalendar.schedule.domain.model.Event;
+import com.connectme.core.DataLayerException;
+import com.connectme.core.UseCase;
+import com.connectme.data.network.NetworkDataSource;
+import com.connectme.schedule.domain.model.Event;
 
 import java.util.List;
 

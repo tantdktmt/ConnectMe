@@ -4,7 +4,7 @@ import android.os.SystemClock;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.dmspro.ecalendar.utils.Constants;
+import com.connectme.util.Constants;
 
 public class SingleItemClick implements AdapterView.OnItemClickListener {
 

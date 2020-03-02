@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dmspro.ecalendar.R;
+import com.connectme.R;
 
 /**
  * Created by tantd on 2/7/2020.

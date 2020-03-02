@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.dmspro.ecalendar.R;
-import com.dmspro.ecalendar.core.BaseFragment;
+import com.connectme.R;
+import com.connectme.core.BaseFragment;
 
 /**
  * Created by tantd on 8/22/2017.

@@ -6,6 +6,9 @@ import android.content.res.Configuration;
 
 import androidx.multidex.MultiDex;
 
+import com.connectme.util.CommonUtils;
+import com.connectme.util.NGPrefUtils;
+
 /**
  * Created by tantd on 2/7/2020.
  */
