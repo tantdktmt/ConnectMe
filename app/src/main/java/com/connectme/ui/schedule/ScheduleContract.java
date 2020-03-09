@@ -1,8 +1,8 @@
-package com.connectme.schedule;
+package com.connectme.ui.schedule;
 
 import com.connectme.core.BasePresenter;
 import com.connectme.core.IView;
-import com.connectme.schedule.domain.model.Event;
+import com.connectme.data.network.model.Event;
 
 import java.util.List;
 

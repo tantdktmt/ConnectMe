@@ -1,4 +1,4 @@
-package com.connectme.schedule;
+package com.connectme.ui.schedule;
 
 import android.graphics.RectF;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
 import com.connectme.R;
 import com.connectme.core.BaseFragment;
-import com.connectme.schedule.domain.model.Event;
+import com.connectme.data.network.model.Event;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -74,10 +74,12 @@ public class ScheduleFragment extends BaseFragment implements ScheduleContract.V
 
     @Override
     public void onError(Throwable t) {
+        mActivity.showToast("Error occurs");
     }
 
     @Override
     public void showSchedule(List<Event> lstEvent) {
+        mActivity.showToast("Migration from ThreadPoolExcutor to Rx");
         this.events.clear();
         for (Event event : lstEvent) {
             this.events.add(event.toWeekViewEvent());

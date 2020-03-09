@@ -1,4 +1,4 @@
-package com.connectme.schedule.domain.model;
+package com.connectme.data.network.model;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;

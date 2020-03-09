@@ -1,4 +1,4 @@
-package com.connectme.schedule;
+package com.connectme.ui.schedule;
 
 import android.os.Bundle;
 
