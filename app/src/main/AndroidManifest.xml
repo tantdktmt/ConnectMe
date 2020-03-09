@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".schedule.ScheduleActivity">
+        <activity android:name=".ui.schedule.ScheduleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

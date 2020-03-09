@@ -1,23 +1,15 @@
 package com.connectme.data.network;
 
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import com.connectme.data.network.model.Event;
+
+import java.util.List;
+
+import io.reactivex.Single;
 
 /**
- * Created by tantd on 2/7/2020.
+ * Created by HP on 8/21/2017.
  */
-public class ApiHelper {
+public interface ApiHelper {
 
-    public static final String BASE_URL = "https://api.myjson.com/bins/";
-    private static Retrofit retrofit = null;
-
-    public static Retrofit getRetrofit() {
-        if (retrofit == null) {
-            retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
-        }
-        return retrofit;
-    }
+    Single<List<Event>> getSchedules();
 }
