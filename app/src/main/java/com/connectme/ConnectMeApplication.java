@@ -2,7 +2,6 @@ package com.connectme;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.res.Configuration;
 
 import androidx.multidex.MultiDex;
 
@@ -30,10 +29,5 @@ public class ConnectMeApplication extends Application {
     protected void attachBaseContext(Context context) {
         super.attachBaseContext(context);
         MultiDex.install(this);
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
     }
 }
