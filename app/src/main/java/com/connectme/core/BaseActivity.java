@@ -123,7 +123,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFrag
     }
 
     public void finish(int animationType) {
-        finish();
+        super.finish();
         startTransition(animationType);
     }
 
