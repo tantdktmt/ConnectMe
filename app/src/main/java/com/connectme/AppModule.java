@@ -6,13 +6,15 @@ import dagger.Provides;
 @Module
 public class AppModule {
 
-    public AppModule() {
+    private ConnectMeApplication mApplication;
 
+    public AppModule(ConnectMeApplication application) {
+        mApplication = application;
     }
 
     @AppScope
     @Provides
     ConnectMeApplication provideApplicationContext() {
-        return ConnectMeApplication.getInstance();
+        return mApplication;
     }
 }

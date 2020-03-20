@@ -6,10 +6,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.connectme.R;
@@ -31,6 +33,14 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFrag
     private SingleItemClick mSingleItemClick;
 
     private ProgressDialog mProgressDialog;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setUpActivityComponent();
+    }
+
+    protected abstract void setUpActivityComponent();
 
     @Override
     public void onFragmentAttached() {
@@ -123,7 +133,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFrag
     }
 
     public void finish(int animationType) {
-        finish();
+        super.finish();
         startTransition(animationType);
     }
 

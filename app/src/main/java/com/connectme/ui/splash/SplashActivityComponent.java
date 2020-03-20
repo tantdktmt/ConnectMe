@@ -8,4 +8,6 @@ import dagger.Subcomponent;
 @ActivityScope
 @Subcomponent(modules = {SplashActivityModule.class})
 public interface SplashActivityComponent {
+
+    public void inject(SplashActivity splashActivity);
 }

@@ -19,4 +19,10 @@ public class SplashActivityModule {
     public SplashActivity provideSplashActivity() {
         return mActivity;
     }
+
+    @ActivityScope
+    @Provides
+    public SplashPresenter provideSplashPresenter() {
+        return new SplashPresenter(mActivity);
+    }
 }
