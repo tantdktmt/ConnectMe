@@ -36,11 +36,19 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseFrag
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setupActivityComponent();
         super.onCreate(savedInstanceState);
-        setUpActivityComponent();
     }
 
-    protected abstract void setUpActivityComponent();
+    protected abstract void setupActivityComponent();
+
+    @Override
+    protected void onDestroy() {
+        releaseActivityComponent();
+        super.onDestroy();
+    }
+
+    protected abstract void releaseActivityComponent();
 
     @Override
     public void onFragmentAttached() {

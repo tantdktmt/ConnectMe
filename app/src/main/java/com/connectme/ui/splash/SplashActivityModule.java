@@ -22,7 +22,7 @@ public class SplashActivityModule {
 
     @ActivityScope
     @Provides
-    public SplashPresenter provideSplashPresenter() {
+    public SplashContract.Presenter provideSplashPresenter() {
         return new SplashPresenter(mActivity);
     }
 }

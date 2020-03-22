@@ -1,5 +1,6 @@
 package com.connectme.ui.schedule;
 
+import android.content.Context;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,15 +24,18 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
+import javax.inject.Inject;
+
 /**
  * Created by tantd on 2/7/2020.
  */
 public class ScheduleFragment extends BaseFragment implements ScheduleContract.View, WeekView.EventClickListener, MonthLoader.MonthChangeListener, WeekView.EventLongPressListener, WeekView.EmptyViewLongPressListener {
 
     private WeekView mWeekView;
-
     private List<WeekViewEvent> events = new ArrayList<WeekViewEvent>();
-    private ScheduleContract.Presenter mPresenter;
+
+    @Inject
+    ScheduleContract.Presenter mPresenter;
 
     public ScheduleFragment() {
     }
@@ -40,10 +44,16 @@ public class ScheduleFragment extends BaseFragment implements ScheduleContract.V
         return new ScheduleFragment();
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        ScheduleActivityComponent component = ((ScheduleActivity) mActivity).getActivityComponent();
+        component.inject(this);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mPresenter = new SchedulePresenter();
         mPresenter.onAttach(this);
         return inflater.inflate(R.layout.fragment_schedule, container, false);
     }

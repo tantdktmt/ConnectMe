@@ -9,7 +9,14 @@ import com.connectme.core.BaseActivity;
 import com.connectme.data.network.UserModule;
 import com.connectme.data.network.model.User;
 
+import javax.inject.Inject;
+
 public class SplashActivity extends BaseActivity {
+
+    @Inject
+    SplashContract.Presenter mPresenter;
+
+    private SplashActivityComponent mActivityComponent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,8 +24,14 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpActivityComponent() {
-        ConnectMeApplication.getInstance().getAppComponent().plus(new SplashActivityModule(this)).inject(this);
+    protected void setupActivityComponent() {
+        mActivityComponent = ConnectMeApplication.getInstance().getAppComponent().plus(new SplashActivityModule(this));
+        mActivityComponent.inject(this);
+    }
+
+    @Override
+    protected void releaseActivityComponent() {
+        mActivityComponent = null;
     }
 
     public void gotoRepositoriesListActivity() {

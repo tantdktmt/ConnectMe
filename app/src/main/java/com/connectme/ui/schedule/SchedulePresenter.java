@@ -5,7 +5,7 @@ package com.connectme.ui.schedule;
  */
 public class SchedulePresenter extends ScheduleContract.Presenter {
 
-    public SchedulePresenter() {
+    public SchedulePresenter(ScheduleActivity activity) {
     }
 
     @Override

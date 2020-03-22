@@ -22,7 +22,7 @@ public class RepositoriesListActivityModule {
 
     @ActivityScope
     @Provides
-    public RepositoriesListPresenter providePresenter() {
+    public RepositoriesListContract.Presenter providePresenter() {
         return new RepositoriesListPresenter(mActivity);
     }
 }

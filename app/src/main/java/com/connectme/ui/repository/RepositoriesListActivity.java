@@ -7,7 +7,14 @@ import androidx.annotation.Nullable;
 import com.connectme.ConnectMeApplication;
 import com.connectme.core.BaseActivity;
 
+import javax.inject.Inject;
+
 public class RepositoriesListActivity extends BaseActivity {
+
+    @Inject
+    RepositoriesListContract.Presenter mPresenter;
+
+    private RepositoriesListActivityComponent mActivityComponent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -15,14 +22,15 @@ public class RepositoriesListActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpActivityComponent() {
-        ConnectMeApplication.getInstance().getUserComponent().plus(new RepositoriesListActivityModule(this)).inject(this);
+    protected void setupActivityComponent() {
+        mActivityComponent = ConnectMeApplication.getInstance().getUserComponent().plus(new RepositoriesListActivityModule(this));
+        mActivityComponent.inject(this);
     }
 
     @Override
-    public void finish() {
+    protected void releaseActivityComponent() {
+        mActivityComponent = null;
         // Release UserComponent object
         ConnectMeApplication.getInstance().releaseUserComponent();
-        super.finish();
     }
 }
