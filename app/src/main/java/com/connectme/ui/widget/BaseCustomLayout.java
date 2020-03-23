@@ -1,4 +1,4 @@
-package com.connectme.widget;
+package com.connectme.ui.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
